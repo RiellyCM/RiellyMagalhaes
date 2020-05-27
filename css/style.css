@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+/*importa a fonte do google fontes*/
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFDEAD;
+    align-items: center;
+    padding: 15px;
+    }
+
+  .list {
+    list-style: none;
+  }
+
+  .list li {
+    display: inline-block;
+    margin: 10px;
+    /*faz os elementos do li serem inline-block ou seja, ficam um do lado do outro*/
+  }
+
+   a {
+     text-decoration: none;
+     color: black;
+   }
+
+  .titulo:hover {
+    color: #B22222;
+    cursor:pointer;
+  /*Hover sinaliza que só ocorrem as regras se o cursor passar pelo texto e o pointer muda o cursor para uma mãozinha */
+  }
+
+  .titulo {
+    transition: color 2s linear;
+    font-size: 28px;
+    /*3 parametros para a transição: quando; em quanto tempo e o estilo da transição*/
+  }
+
+  .navbar {
+      text-align: right;
+  }
+/* inicio da seção sobre mim */
+
+  .about__section {
+      background-color: #FFF5EE;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 300px;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+ }
+/*para centralizar as coisas horizontalmente precisa ter display flex e justify content: center.  */
+/*para centralizar as coisas verticalmente precisa ter display flex e align-items: center.*/
+/*se tiver flex-direction column inverte*/
+
+
+  .about__title {
+      margin: 10px;
+      font-size: 1rem;
+      letter-spacing: 9px;
+      text-transform: uppercase;
+      position: relative;
+      padding: 2rem 1rem;
+      opacity: 0;
+      animation: fadeInText 0s 1.1s both;
+  }
+
+  .about__title:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #FFDEAD;
+      transform: translateX(-100%);
+      animation: enlargeBlock 0.5s 0.6s both, revealBlock 0.5s 1.1s both;
+    }
+
+/* Aqui começa os keyframes para realizar a animação de reveal revealBlock*/
+
+    @keyframes fadeInText {
+       from {
+         opacity: 0;
+       }
+       to {
+         opacity: 1;
+       }
+    }
+
+   @keyframes enlargeBlock {
+       from {
+         width: 0%;
+       }
+       to {
+         width: 100%;
+       }
+   }
+
+   @keyframes revealBlock {
+       from {
+         transform: translateX(0);
+       }
+       to {
+         transform: translateX(100%);
+       }
+    }
+
+
+  .about__subtitle {
+      margin: 10px;
+      width: 230px;
+      margin-bottom: 30px;
+  }
+
+/* final da seção sobre mim */
+
+/*Inicio da seção que possui as fotos*/
+
+  .picture {
+      margin: 20px;
+  }
+
+  .picture img {
+      max-width: 100%;
+  }
+
+
+  .pictures__list{
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      flex-flow: column;
+  }
+
+
+  @media screen and (min-width:600px) {
+    .pictures__list {
+      flex-flow: row;
+    }
+    .picture img {
+      max-height: 144px;
+    }
+  }
+
+  @media screen and (min-width:768px){
+    .picture img {
+      max-height: 500px;
+    }
+}
+
+  .pictures__section {
+      display: flex;
+      justify-content: center;
+      background-color: #FFDAB9;
+  }
+
+/*Termina a seção que tem as fotos*/
+
+/*começa a seção de projetos*/
+  .view__more {
+    margin: 20px;
+  }
+  .project__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFF5EE;
+  }
+
+  .item_project {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-flow: column;
+  }
+
+  @media screen and (min-width: 600px) {
+    .item_project {
+      flex-flow: row;
+    }
+  }
+
+  @media screen and (min-width:768px){
+    .pictures_project img {
+      max-height: 400px;
+    }
+  }
+
+  .titulo__section {
+    margin: 10px;
+  }
+
+  .pictures_project img {
+    max-width: 100%;
+  }
+
+  .pictures_project {
+    margin: 20px;
+  }
+/*termina a seção de projetos*/
+
+/* começa a seção de redes sociais */
+  .contact__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFDAB9;
+    padding: 15px;
+  }
+
+  .item__contact {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .social__icon {
+    width: 50px;
+  }
+
+  @media screen and (min-width:600px) {
+    .item__contact {
+      justify-content: center;
+    }
+    .social__icon {
+      margin: 20px;
+    }
+  }
+
+/* termina a seção de redes sociais */
+  .footer__section {
+    display: flex;
+    justify-content: center;
+    background-color: #FFDEAD;
+    font-size: 10px;
+  }

@@ -181,7 +181,7 @@
   }
 
   .pictures__section {
-    align-items: center;
+      align-items: center;
       display: flex;
       justify-content: space-between;
       background-color: #FFDAB9;
@@ -227,11 +227,21 @@
   }
 
   .pictures_project img {
-    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 20px;
   }
 
   .pictures_project {
     margin: 20px;
+  }
+
+  .view__more {
+    color: #B22222;
+    padding: 0;
+    margin:0;
   }
 /*termina a seção de projetos*/
 

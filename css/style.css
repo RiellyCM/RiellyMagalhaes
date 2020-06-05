@@ -254,12 +254,20 @@
     padding: 15px;
   }
 
+  .contact__title__section {
+    left: 0 20px;
+  }
+
   .item__contact {
     list-style: none;
     display: flex;
     justify-content: space-between;
   }
 
+  .social__icon_list{
+    margin: 0 10px;
+    align-items: center;
+  }
   .social__icon {
     width: 50px;
   }

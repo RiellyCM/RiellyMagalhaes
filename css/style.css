@@ -137,7 +137,7 @@
       align-items: center;
   }
 
-  @media screen and (max-width:600px){
+  @media (max-width: 600px) {
     .pictures__section {
       display: block;
       height: 550px;
@@ -149,6 +149,12 @@
       transform: translateY(-15px);
   }
 
+  @media (max-width: 600px) {
+    .pictures__items {
+      transform: none;
+    }
+  }
+
   .picture__section__item_one {
       width: 195px;
       height: 195px;
@@ -157,7 +163,7 @@
   }
 
   @media screen and (max-width:600px){
-    .pictures__section__item_one {
+    .picture__section__item_one {
       width: 145px;
       height: 145px;
     }
@@ -173,8 +179,8 @@
       top: 50px;
   }
 
-  @media screen and (max-width:600px){
-    .pictures__section__item_two {
+  @media (max-width:600px){
+    .picture__section__item_two {
       width: 145px;
       height: 145px;
       left: 125px;
@@ -187,13 +193,13 @@
       width: 55%;
   }
 
-  @media screen and (max-width:600px){
-    .about__title {
+  @media (max-width:600px){
+    .about__text {
       width: 100%;
     }
   }
 
-  @media and (min-width:600px) {
+  @media  (min-width:600px) {
     .pictures__list {
       flex-flow: row;
     }
@@ -202,19 +208,12 @@
     }
   }
 
-  @media screen and (min-width:768px){
+  @media  (min-width:768px){
     .picture img {
       max-height: 500px;
     }
   }
 
-  .pictures__section {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      background-color: #FFDAB9;
-      height: 350px;
-  }
 
 /*Termina a seção que tem as fotos*/
 
@@ -238,14 +237,14 @@
     flex-flow: column;
   }
 
-  @media screen and (min-width: 600px) {
+  @media  (min-width: 600px) {
     .item_project {
       flex-flow: row;
       justify-content: center;
     }
   }
 
-  @media screen and (min-width:768px){
+  @media (min-width:768px){
     .pictures_project img {
       max-height: 400px;
     }
@@ -283,7 +282,6 @@
     padding: 15px;
   }
 
-
   .item__contact {
     list-style: none;
     display: flex;
@@ -306,7 +304,7 @@
   }
 
 
-  @media screen and (min-width:600px) {
+  @media (min-width:600px) {
     .item__contact {
       justify-content: center;
     }

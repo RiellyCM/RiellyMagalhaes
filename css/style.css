@@ -314,15 +314,13 @@
     fill: #B22222;
   }
 
-
-  @media (min-width:600px) {
-    .item__contact {
-      justify-content: center;
-    }
+  @media (max-width:600px){
     .social__icon {
-      margin: 20px;
+      width: 35px;
+      margin: 6px;
     }
   }
+
 
 /* termina a seção de redes sociais */
   .footer__section {
